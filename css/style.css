@@ -1,0 +1,53 @@
+.msl-center-text { text-align: center;}
+
+ion-item[data-style="ashville"] a
+{
+    background-color: black !important;
+}
+ion-item[data-style="ashville"] a h2,
+ion-item[data-style="ashville"] a p
+{
+    color: green !important;
+}
+
+
+ion-item[data-style="leeds"] a
+{
+    background-color: green !important;
+}
+ion-item[data-style="leeds"] a h2,
+ion-item[data-style="leeds"] a p
+{
+    color: black !important;
+}
+
+
+ion-item[data-style="odenville"] a
+{
+    background-color: maroon !important;
+}
+ion-item[data-style="odenville"] a h2,
+ion-item[data-style="odenville"] a p
+{
+    color: white !important;
+}
+
+ion-item[data-style="springville"] a
+{
+    background-color: purple !important;
+}
+ion-item[data-style="springville"] a h2,
+ion-item[data-style="springville"] a p
+{
+    color: white !important;
+}
+
+ion-item[data-style="ragland"] a
+{
+    background-color: darkgray !important;
+}
+ion-item[data-style="ragland"] a h2,
+ion-item[data-style="ragland"] a p
+{
+    color: purple !important;
+}
