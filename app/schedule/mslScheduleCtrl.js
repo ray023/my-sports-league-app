@@ -43,7 +43,7 @@ mslApp
             });
         };
 
-        if (Subscribe.activeTeams.length > 0)
+        if (Subscribe.getSubscribedTeamIds().length > 0)
         {
             Schedule.getSchedule().then(
                 success_callback,
@@ -58,7 +58,7 @@ mslApp
         }
 
         $scope.refresh = function() {
-            if (Subscribe.activeTeams.length > 0)
+            if (Subscribe.getSubscribedTeamIds().length > 0)
             {
                 Schedule.getSchedule().then(
                     success_callback,

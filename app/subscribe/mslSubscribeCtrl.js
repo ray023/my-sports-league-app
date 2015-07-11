@@ -10,7 +10,7 @@ mslApp
         $scope.SubscribeModel = Subscribe;
 
         var success_callback = function(teams){
-            Subscribe.saveActiveTeams(teams);
+            Subscribe.saveActiveTeamsToLocalStorage(teams);
             var association_seasons = [];
             var season_key_array = [];
             angular.forEach(teams, function(value) {
@@ -44,13 +44,13 @@ mslApp
             });
         };
 
-        Subscribe.getActiveTeams().then(
+        Subscribe.getActiveTeamsFromServer().then(
             success_callback,
             error_callback
         );
 
         $scope.refresh = function() {
-            Subscribe.getActiveTeams().then(
+            Subscribe.getActiveTeamsFromServer().then(
                 success_callback,
                 error_callback
             );
@@ -85,7 +85,7 @@ mslApp
         var season_key = $stateParams.season_key.split('_');
         var association_id = season_key[0];
         var season_id = season_key[1];
-        var all_active_teams = Subscribe.activeTeams();
+        var all_active_teams = Subscribe.getActiveTeamsFromLocalStorage();
 
         var season_sport_groups = [];
         var sport_group_array = [];

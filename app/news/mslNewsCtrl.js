@@ -10,13 +10,11 @@ mslApp
     .controller('NewsCtrl', function($scope, $ionicPopup, News, Subscribe) {
 
         var success_callback = function(schedule){
-            console.log('success');
             $scope.data = {
                 schedule: schedule
             };
         };
         var error_callback = function(statusCode){
-            console.log('error');
             var statusMessage = 'Server Error:  ' + statusCode;
             if (statusCode == '404')
                 statusMessage = 'Could not connect to server.  Please make sure you have network connectivity.';
@@ -28,7 +26,7 @@ mslApp
             });
         };
 
-        if (Subscribe.activeTeams.length > 0)
+        if (Subscribe.getSubscribedTeamIds().length > 0)
         {
             News.getNews().then(
                 success_callback,
@@ -45,7 +43,8 @@ mslApp
 
 
         $scope.refresh = function() {
-            if (Subscribe.activeTeams.length > 0)
+            console.log(Subscribe.getSubscribedTeamIds());
+            if (Subscribe.getSubscribedTeamIds().length > 0)
             {
                 News.getNews().then(
                     success_callback,

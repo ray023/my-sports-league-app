@@ -14,7 +14,7 @@ mslApp
         };
 
         return {
-            getActiveTeams: function() {
+            getActiveTeamsFromServer: function() {
                 var deferred  = $q.defer();
 
                 $ionicLoading.show({template: 'Loading...'});
@@ -30,10 +30,10 @@ mslApp
 
                 return deferred.promise;
             },
-            saveActiveTeams: function(value) {
+            saveActiveTeamsToLocalStorage: function(value) {
                 localStorage.setItem(LocalStorageConstants.ACTIVE_TEAMS,JSON.stringify(value));
             },
-            activeTeams: function() {
+            getActiveTeamsFromLocalStorage: function() {
                 return JSON.parse(localStorage.getItem(LocalStorageConstants.ACTIVE_TEAMS));
             },
             addSubscribedTeamId: function (team_id){
