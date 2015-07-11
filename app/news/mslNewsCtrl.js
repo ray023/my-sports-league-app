@@ -43,7 +43,6 @@ mslApp
 
 
         $scope.refresh = function() {
-            console.log(Subscribe.getSubscribedTeamIds());
             if (Subscribe.getSubscribedTeamIds().length > 0)
             {
                 News.getNews().then(

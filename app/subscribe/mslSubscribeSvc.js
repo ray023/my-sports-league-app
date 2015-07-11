@@ -59,10 +59,8 @@ mslApp
                 return true;
             },
             getSubscribedTeamIds: function (){
-                if (localStorage.getItem(LocalStorageConstants.SUBSCRIBED_TEAMS) == null)
-                    localStorage.setItem(LocalStorageConstants.SUBSCRIBED_TEAMS,'');
-
-                return JSON.parse(localStorage.getItem(LocalStorageConstants.SUBSCRIBED_TEAMS));
+                var subscribed_teams = localStorage.getItem(LocalStorageConstants.SUBSCRIBED_TEAMS);
+                return subscribed_teams == null ? '' : JSON.parse(localStorage.getItem(LocalStorageConstants.SUBSCRIBED_TEAMS));
             }
         }
     });
