@@ -4,7 +4,7 @@
     <description>
         Get your local sports' schedules
     </description>
-    <author email="ray@gmail.com" href="http://www.o1solution.com">
+    <author email="ray023@gmail.com" href="http://www.o1solution.com">
         Ray Nowell
     </author>
     <content src="index.html" />
@@ -24,19 +24,12 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="android-installLocation" value="auto" />
-    <gap:plugin name="org.apache.cordova.battery-status" />
-    <gap:plugin name="org.apache.cordova.console" />
-    <gap:plugin name="org.apache.cordova.device-orientation" />
-    <gap:plugin name="org.apache.cordova.dialogs" />
-    <gap:plugin name="org.apache.cordova.file" />
-    <gap:plugin name="org.apache.cordova.file-transfer" />
     <gap:plugin name="org.apache.cordova.geolocation" />
     <gap:plugin name="org.apache.cordova.globalization" />
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
     <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
     <icon src="icon.png" />
