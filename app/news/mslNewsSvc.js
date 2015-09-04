@@ -19,6 +19,7 @@ mslApp
                 }
 
                 $ionicLoading.show({template: 'Loading...'});
+                console.log(subscribed_teams.join('/'));
                 $http({method: 'GET', url: Settings.getUrl() + '/news/get_upcoming_games/' + subscribed_teams.join('/')}).
                     success(function (data, status, headers, config) {
                         $ionicLoading.hide();
